@@ -1,27 +1,18 @@
 <ion-content class="r3t-hello">
-  <div class="container">
-    <div class="grid">
-      <ion-row>
-        <ion-col>Hello ! ! !</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>Welcome use AMIM constructor</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>A</ion-col>
-        <ion-col>M</ion-col>
-        <ion-col>I</ion-col>
-        <ion-col>M</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col><a href="https://angular.io/">Angular2</a></ion-col>
-        <ion-col><a href="https://www.meteor.com">Meteor</a></ion-col>
-        <ion-col><a href="http://ionicframework.com/">Ionic2</a></ion-col>
-        <ion-col><a href="https://www.mongodb.com/">MongoDB</a></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>Have fun! ! !</ion-col>
-      </ion-row>
-    </div>
-  </div>
+
+    <ion-note>test</ion-note>
+
+    <ion-row wrap>
+      <ion-col  *ngFor="let item of items" width-33>{{item.title}}</ion-col>
+    </ion-row>
+  <ion-col>不在row中的col</ion-col>
+
+<my-list [items]="[{
+         title: 'first',
+         content: 'test1'
+         },{
+         title: 'second',
+         content:'test2'
+         }]"></my-list>
+
 </ion-content>

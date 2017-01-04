@@ -1,5 +1,5 @@
 'use strict';
-
-const Widgets: Array<any> = [];
+import {MyListComponent} from './my-list'
+const Widgets: Array<any> = [MyListComponent];
 
 export default Widgets;
