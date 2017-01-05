@@ -1,5 +1,7 @@
-<ion-row>
-  <ion-col *ngFor="let item of items">
-    {{item.title}}：{{item.content}}
+<ion-row text-center class="bylh-my-list">
+  <ion-col class="my-list-col" *ngFor="let item of items; let i=index">
+    <div class="my-list-div">{{item.title}}{{i}}</div>
+    <div class="my-list-div">{{item.content}}{{[i + 1]}}</div>
   </ion-col>
 </ion-row>
+

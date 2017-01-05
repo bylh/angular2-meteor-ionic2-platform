@@ -1,18 +1,30 @@
 <ion-content class="r3t-hello">
 
-    <ion-note>test</ion-note>
 
-    <ion-row wrap>
-      <ion-col  *ngFor="let item of items" width-33>{{item.title}}</ion-col>
-    </ion-row>
-  <ion-col>不在row中的col</ion-col>
+  <ion-title *ngIf="true">
+    ngif == true
+  </ion-title>
+  <input type="text" ng-model="a"/>
+  <div>{{a}}</div>
 
+  <ion-item>test2</ion-item>
 <my-list [items]="[{
          title: 'first',
-         content: 'test1'
+         content: 'test'
          },{
          title: 'second',
-         content:'test2'
+         content:'test'
+
+         },{
+         title: 'second',
+         content:'test'
+         }]"></my-list>
+  <my-list [items]="[{
+         title: 'first',
+         content: 'test1放大镜和环境放大号放假哈等级师傅好骄傲的身份打算放好久达到双方就回答都是风景好的撒发放后决定手机号范德萨机房环境的撒娇发货的萨菲黄金'
+         },{
+         title: 'three',
+         content:'test'
          }]"></my-list>
 
 </ion-content>

@@ -1,6 +1,46 @@
-my-list+my-list{
+
+.bylh-my-list {
+  border-bottom: solid red;
+  border-left: solid yellow;
+  border-right: solid blue;
+  border-width: 4px;
+
+  .my-list-col{
+     //align-items: center;
+    //text-align: center;
+    //display: flex;
+    //justify-content: space-around;
+    .my-list-div{
+      //text-overflow: ellipsis;
+      //white-space:nowrap;
+      //overflow: hidden;
+    }
+    div
+    {
+      //flex-wrap: nowrap;
+      text-overflow: ellipsis;
+      white-space:nowrap;
+      overflow:hidden;
+    }
+
+    div:hover
+    {
+      //text-overflow: ellipsis;
+      //text-overflow:inherit;
+      overflow:visible;
+      background-color: aqua;
+    }
+  }
+}
+ion-item+my-list{
 
 }
-my-list{
-  boder: 4px
+
+my-list:first-of-type{
+  .bylh-my-list {
+
+    @include bylh-my-list-col-count;
+    border-top: solid pink;
+
+  }
 }
