@@ -4,5 +4,29 @@
   //    background-color: beige;
   //  }
   //}
+  .box {
+    display: block;
+    background: red;
+    width: 100px;
+    height: 100px;
+    //float: left;
+    margin: 20px;
+    color: white;
+  }
+  #two {
+    background-color:blue;
+    //top: 80px;
+    left: 20px;
+    text-align: center;
+  }
 
+  //align-items: center;
+  //text-align: center;
+  //.card-datas {
+  //  color: #828384;
+  //  font-size: 1.0rem;
+  //  display: flex;
+  //  flex-direction: column;
+  //  justify-content: space-between;
+  //}
 }

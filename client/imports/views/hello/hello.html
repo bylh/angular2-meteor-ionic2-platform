@@ -2,11 +2,10 @@
 
 
   <ion-title *ngIf="true">
-    ngif == true
+    {{test}}
   </ion-title>
-  <input type="text" ng-model="a"/>
-  <div>{{a}}</div>
-
+  <input type="text" [(ngModel)]="test">
+  <div>{{test}}</div>
   <ion-item>test2</ion-item>
 <my-list [items]="[{
          title: 'first',
@@ -26,5 +25,11 @@
          title: 'three',
          content:'test'
          }]"></my-list>
+
+
+  <div class="box" id="one">One</div>
+  <div class="box" id="two">Two</div>
+  <div class="box" id="three">Three</div>
+  <div class="box" id="four">Four</div>
 
 </ion-content>

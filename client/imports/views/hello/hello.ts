@@ -15,6 +15,8 @@ interface Item {
 
 export class HelloComponent {
     items: Item [];
+    test: any;
+
 
    //noinspection JSAnnotator
     constructor(private navController: NavController, private zone: NgZone){
