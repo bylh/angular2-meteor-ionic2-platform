@@ -1,13 +1,11 @@
 <ion-content class="r3t-hello">
-
-
-  <ion-title *ngIf="true">
-    {{test}}
-  </ion-title>
-  <input type="text" [(ngModel)]="test">
-  <div>{{test}}</div>
-  <ion-item>test2</ion-item>
-<my-list [items]="[{
+    <ion-title *ngIf="true">
+        {{test}}
+    </ion-title>
+    <input type="text" [(ngModel)]="test"/>
+    <div>{{test}}</div>
+    <ion-item>test2</ion-item>
+    <my-list [items]="[{
          title: 'first',
          content: 'test'
          },{
@@ -18,7 +16,7 @@
          title: 'second',
          content:'test'
          }]"></my-list>
-  <my-list [items]="[{
+    <my-list [items]="[{
          title: 'first',
          content: 'test1放大镜和环境放大号放假哈等级师傅好骄傲的身份打算放好久达到双方就回答都是风景好的撒发放后决定手机号范德萨机房环境的撒娇发货的萨菲黄金'
          },{
@@ -26,10 +24,25 @@
          content:'test'
          }]"></my-list>
 
-
-  <div class="box" id="one">One</div>
-  <div class="box" id="two">Two</div>
-  <div class="box" id="three">Three</div>
-  <div class="box" id="four">Four</div>
-
+    <div class="box" id="one">One</div>
+    <div class="box" id="two">Two</div>
+    <div class="box" id="three">Three</div>
+    <div class="box" id="four">Four</div>
+        <ion-list>
+            <ion-item>
+                <ion-thumbnail item-left>
+                    <img src="img/img.jpg"/>
+                </ion-thumbnail>
+                缩略图
+            </ion-item>
+            <ion-item>
+                <ion-avatar item-left>
+                    <img src="img/img.jpg"/>
+                </ion-avatar>
+                用户头像
+            </ion-item>
+            <ion-item>
+                <ion-icon name="heart" item-left></ion-icon>图标
+            </ion-item>
+        </ion-list>
 </ion-content>

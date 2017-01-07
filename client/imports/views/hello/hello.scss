@@ -5,7 +5,7 @@
   //  }
   //}
   .box {
-    display: block;
+    display:inline-block;
     background: red;
     width: 100px;
     height: 100px;
@@ -16,8 +16,10 @@
   #two {
     background-color:blue;
     //top: 80px;
-    left: 20px;
+    //left: 20px;
     text-align: center;
+    border: solid red;
+    //padding: 20px;
   }
 
   //align-items: center;
