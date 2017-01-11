@@ -13,3 +13,4 @@ shell-server                        # Server-side component of the `meteor shell
 angular2-compilers                  # Angular 2 Templates, HTML and TypeScript compilers for Meteor
 urigo:cancel-fastclick              # Removes fastclick in case it exists, Used for the official Ionic package
 barbatus:angular2-polyfills         # Polyfills for Angular2
+accounts-password

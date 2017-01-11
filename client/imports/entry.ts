@@ -1,7 +1,7 @@
 'use strict';
 
 import {Component, OnInit} from "@angular/core";
-
+import { AccountsModule } from 'angular2-meteor-accounts-ui';
 import {HelloComponent} from './views/hello/hello';
 
 @Component({

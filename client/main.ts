@@ -5,11 +5,12 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {BrowserModule} from '@angular/platform-browser';
 import {IonicApp, IonicModule} from 'ionic-angular';
+import { AccountsModule } from 'angular2-meteor-accounts-ui';
 
 import Pipes from './imports/pipes/pipes';
 import Widgets from './imports/widgets/widgets';
 import Views from './imports/views/views';
-
+import Services from './imports/services/services';
 import {EntryComponent} from './imports/entry';
 
 @NgModule({
@@ -21,12 +22,14 @@ import {EntryComponent} from './imports/entry';
     ],
     entryComponents: [...Views],
     imports: [
+        AccountsModule,
         BrowserModule,
         FormsModule,
         IonicModule.forRoot(EntryComponent, {
             tabsHideOnSubPages: 'true'
         })
     ],
+    providers: [...Services],
     bootstrap: [IonicApp]
 })
 class AppModule {

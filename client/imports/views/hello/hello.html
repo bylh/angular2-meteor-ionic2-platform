@@ -2,6 +2,8 @@
     <ion-title *ngIf="true">
         {{test}}
     </ion-title>
+    <login-buttons></login-buttons>
+    <button ion-button (click)="logout()"><ion-icon name="share-alt"></ion-icon>登出</button>
     <input type="text" [(ngModel)]="test"/>
     <div>{{test}}</div>
     <ion-item>test2</ion-item>
@@ -45,4 +47,5 @@
                 <ion-icon name="heart" item-left></ion-icon>图标
             </ion-item>
         </ion-list>
+
 </ion-content>
