@@ -2,13 +2,16 @@
 
 import {Component, NgZone} from '@angular/core';
 import {MeteorComponent} from "angular2-meteor";
-import {Tracker} from "meteor/tracker";
 //noinspection TypeScriptCheckImport
 import template from './hello.html';
-import {NavController} from 'ionic-angular';
+import {NavController, ModalController} from 'ionic-angular';
 import { Meteor } from 'meteor/meteor'
 import {Accounts} from "meteor/accounts-base";
 import {R3TToastService} from "../../services/service-test";
+import {HelloPageComponent} from "./pages/hello-page";
+import {HelloSubPageComponent} from "./pages/hello-sub-page";
+import Rx from 'rxjs';
+import {Observable, Observer, Subject} from 'rxjs'
 interface Item {
     title: string;
     content: string;
@@ -19,11 +22,11 @@ interface Item {
 
 export class HelloComponent extends MeteorComponent {
     items: Item [];
-    test: any;
 
 
     //noinspection JSAnnotator
     constructor(private navController: NavController,
+                private modalCtrl: ModalController,
                 private zone: NgZone,
                 private toastService: R3TToastService) {
         super();
@@ -53,9 +56,10 @@ export class HelloComponent extends MeteorComponent {
         this.autorun(() => {
 
             this.zone.run(() => {
+
                 Accounts.onLogin(function () {
                     Meteor.logoutOtherClients(function (){
-                        console.log("登录过期");
+
                         //this.toastService.show('登录已过期');
                     });
                 });
@@ -73,4 +77,88 @@ export class HelloComponent extends MeteorComponent {
         });
         //Meteor.logoutOtherClients();
     }
+    pushToHelloPage(){
+        //this.navController.push(HelloPageComponent);
+        let values: Array<any> = [];
+        values.push('first--');
+        values.push('second--');
+        let profileModal = this.modalCtrl.create(HelloPageComponent, { values: values, data: values });
+        profileModal.present();
+    }
+    pushToSubPage(){
+        this.navController.push(HelloSubPageComponent);
+    }
+    changeTab(){
+        this.navController.parent.select(1);
+    }
+    testrxjs(){
+        // console.log('取消subscription的订阅');
+        // subscription.unsubscribe();
+
+
+    }
 }
+//
+setTimeout(() => {
+    let x = document.getElementById("myHeader");
+    console.log(x);
+    let clickStream$: any;
+    clickStream$ = Observable.create(function ( observer ) {
+        x.addEventListener('click', function ( event ) {
+            observer.next(event);
+        }, false);
+    });
+    clickStream$.subscribe(ev => console.log(ev));
+
+},3000);
+
+//----------------------------------
+// var clicks = Observable.fromEvent(document, 'click');
+// clicks.subscribe(x => console.log(x));
+//--------------------------------
+// var observable1 = Observable.interval(400);
+// var observable2 = Observable.interval(300);
+// var subscription = observable1.subscribe(x => console.log('first: ' + x));
+// var childSubscription = observable2.subscribe(x => console.log('second: ' + x));
+// subscription.add(childSubscription);
+// setTimeout(() => {
+//     subscription.remove(childSubscription);
+// },5000);
+// setTimeout(() => {
+// // Unsubscribes BOTH subscription and childSubscription
+//     subscription.unsubscribe();
+// }, 10000);
+
+//0~infinite------------------------------
+// var observable = Observable.interval(1000);
+// var subscription = observable.subscribe(x => console.log(x));
+// -------------------------------
+// var myObservable = Observable.create(function subscribe ( observe ) {
+//     observe.next(1);
+//     observe.next(2);
+//     observe.next(3);
+//     var id = setInterval(() => {
+//         observe.next(4)
+//      }, 1000);
+//     return function unsubscribe() {
+//         clearInterval(id);
+//     }
+// });
+//var subscription = myObservable.subscribe(x => console.log(++x));
+
+//----------------------------------
+// var observable = Observable.create(function subscribe( observer ) {
+//     var id = setInterval(() => {
+//         observer.next('hi')
+//     }, 1000);
+// });
+
+// observable.subscribe(x => console.log(x));
+// console.log('hello');
+//-------------------------------------------------------
+
+// var button = document.querySelector('button');
+// Observable.fromEvent(button, 'click')
+//     .throttleTime(1000)
+//     .scan(count => count, 0)
+//     .subscribe(count => console.log(`Clicked ${count} times`));

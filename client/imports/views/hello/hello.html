@@ -2,6 +2,11 @@
     <ion-title *ngIf="true">
         {{test}}
     </ion-title>
+    <h1 id="myHeader">这是标题</h1>
+    <button id="btn" ion-button block class="btn-test" (click)="testrxjs()">test</button>
+    <button ion-button (click)="pushToHelloPage()"><ion-icon name="walk"></ion-icon></button>
+    <button ion-button (click)="pushToSubPage()">SubPage</button>
+    <button ion-button (click)="changeTab()">ChangeTab</button>
     <login-buttons></login-buttons>
     <button ion-button (click)="logout()"><ion-icon name="share-alt"></ion-icon>登出</button>
     <input type="text" [(ngModel)]="test"/>
