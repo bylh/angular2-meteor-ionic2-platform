@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import {NavParams} from "ionic-angular";
+import template from './tab2.html';
 //import Rx from 'meteor-rxjs';
 // import { Observable} from 'rxjs/Observable';
 //import {Observable} from 'rxjs/Rx';
@@ -14,11 +15,7 @@ import {map} from 'rxjs/operator/map'
 import {Observable, Observer, Subject} from 'rxjs'
 
 @Component({
-    template: `<ion-content>
-tab2
-<button ion-button (click)="test()"></button>
-</ion-content>
-`
+    template
 })
 export class Tab2Component {
     constructor( public params: NavParams ) {
@@ -51,21 +48,21 @@ export class Tab2Component {
     }
 
     test() {
-        let observable = Observable.create(function ( observer: any ) {
-            observer.next(1);
-            observer.next(2);
-            observer.next(3);
-            setTimeout(() => {
-                observer.next(4);
-                observer.complete();
-            }, 1000);
-        });
-        console.log('just before subscribe');
-        observable.subscribe({
-            next: x => console.log('got value ' + x),
-            error: err => console.error('something wrong occurred: ' + err),
-            complete: () => console.log('done'),
-        });
-        console.log('just after subscribe');
+        // let observable = Observable.create(function ( observer: any ) {
+        //     observer.next(1);
+        //     observer.next(2);
+        //     observer.next(3);
+        //     setTimeout(() => {
+        //         observer.next(4);
+        //         observer.complete();
+        //     }, 1000);
+        // });
+        // console.log('just before subscribe');
+        // observable.subscribe({
+        //     next: x => console.log('got value ' + x),
+        //     error: err => console.error('something wrong occurred: ' + err),
+        //     complete: () => console.log('done'),
+        // });
+        // console.log('just after subscribe');
     }
 }
