@@ -141,7 +141,6 @@ export class HelloComponent extends MeteorComponent {
     // let output = multiplyByTen(input);
     // output.subscribe((x: any) => console.log(x));
 
-
 /*----------------------------Operator------------------------------*/
 // setTimeout(() => {
 //     let x = document.getElementById("myHeader");

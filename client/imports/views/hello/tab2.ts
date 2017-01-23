@@ -62,7 +62,7 @@ export class Tab2Component {
         });
         console.log('just before subscribe');
         observable.subscribe({
-            next: x => console.log('got value ' + x),
+            next: x  => console.log('got value ' + x),
             error: err => console.error('something wrong occurred: ' + err),
             complete: () => console.log('done'),
         });
