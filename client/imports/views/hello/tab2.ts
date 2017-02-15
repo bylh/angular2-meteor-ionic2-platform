@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, ViewChild, AfterViewInit} from "@angular/core";
 import {NavParams} from "ionic-angular";
 import template from './tab2.html';
 //import Rx from 'meteor-rxjs';
@@ -17,7 +17,8 @@ import {Observable, Observer, Subject} from 'rxjs'
 @Component({
     template
 })
-export class Tab2Component {
+export class Tab2Component implements AfterViewInit {
+    @ViewChild('myTest') testP: any;
     constructor( public params: NavParams ) {
         // console.log(this.params.get('data1'));
         // var observable1 = Observable.interval(400);
@@ -46,7 +47,10 @@ export class Tab2Component {
         // console.log('hello');
 
     }
-
+    ngAfterViewInit(): void {
+        //this.testP.nativeElement.height;
+        console.log(this.testP.nativeElement.offsetHeight + " +++ " + this.testP.nativeElement.style.lineHeight);
+    }
     test() {
         // let observable = Observable.create(function ( observer: any ) {
         //     observer.next(1);
