@@ -1,4 +1,23 @@
 .r3t-pages-discovery-detail {
+
+  .col-img {
+    padding:0;
+    padding-right: 1rem;
+    max-width: 12rem;
+    .card-img {
+      height: 10rem;
+      width: 12rem;
+      //padding-left: 1rem;
+    }
+  }
+  .info {
+    padding:  0;
+    max-width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .description {
     @include multiline-ellipsis-original($route-description-font-size, $route-description-line-height, $route-description-line-to-show);
     &.truncate {
