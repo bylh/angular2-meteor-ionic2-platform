@@ -1,16 +1,17 @@
 .r3t-pages-discovery-detail {
-  p{
-    line-height: 16px;
+  .description {
+    @include multiline-ellipsis-original($route-description-font-size, $route-description-line-height, $route-description-line-to-show);
+    &.truncate {
+      @include multiline-ellipsis-truncated($route-description-font-size, $route-description-line-height, $route-description-line-to-show);
+      //overflow : hidden;
+      //text-overflow: ellipsis;
+      //display: -webkit-box;
+      //line-height: 20px;
+      //-webkit-line-clamp: 3;
+      //-webkit-box-orient: vertical;
+    }
   }
-.test {
-  background-color: green;
-  overflow : hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  line-height: 16px;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
+
   //.description {
   //  margin-top: 0; // remove the default margin-top
   //  @include multiline-ellipsis-original($route-description-font-size, $route-description-line-height, $route-description-line-to-show);

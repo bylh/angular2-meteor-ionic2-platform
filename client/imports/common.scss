@@ -1,21 +1,28 @@
 @mixin bylh-my-list-col-count {
   background-color: darkgoldenrod;
 }
-$route-description-font-size: 12px;
+$route-description-font-size: 14px;
 $route-description-line-height: 20px;
-$route-description-line-to-show: 2;
+$route-description-line-to-show: 3;
 
-//@mixin multiline-ellipsis-original($font-size, $line-height, $lines-to-show) {
-//  display: block; /* Fallback for non-webkit */
-//  display: -webkit-box;
-//  font-size: $font-size;
-//  line-height: $line-height;
-//}
-//@mixin multiline-ellipsis-truncated($font-size, $line-height, $lines-to-show) {
-//  max-height: $font-size * $line-height * $lines-to-show; /* Fallback for non-webkit */
-//  -webkit-line-clamp: $lines-to-show;
-//  -webkit-box-orient: vertical;
-//  overflow: hidden;
-//  text-overflow: ellipsis;
-//}
+@mixin multiline-ellipsis-original($font-size, $line-height, $lines-to-show) {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+@mixin multiline-ellipsis-truncated($font-size, $line-height, $lines-to-show) {
+  //max-height: $font-size * $line-height * $lines-to-show; /* Fallback for non-webkit */
+  //-webkit-line-clamp: $lines-to-show;
+  //-webkit-box-orient: vertical;
+  //overflow: hidden;
+  //text-overflow: ellipsis;
+
+  overflow : hidden;
+    text-overflow: ellipsis;
+   // display: -webkit-box;
+   // line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+}
 
