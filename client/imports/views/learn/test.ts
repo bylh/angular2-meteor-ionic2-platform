@@ -1,8 +1,24 @@
-let myPromise = new Promise(function ( resolve ) {
-    resolve(42);
-});
-myPromise.then(value => {
+function getURL(URL) {
+    return new Promise(function (resolve, reject) {
+        var req = new XMLHttpRequest();
+        req.open('GET', URL, true);
+        req.onload = function () {
+            if (req.status === 200) {
+                resolve(req.responseText);
+            } else {
+                reject(new Error(req.statusText));
+            }
+        };
+        req.onerror = function () {
+            reject(new Error(req.statusText));
+        };
+        req.send();
+    });
+}
+// 运行示例
+var myURL = "http://httpbin.org/get";
+getURL(myURL).then(function onFulfilled(value){
     console.log(value);
-}).catch(err => {
-    console.log(err);
+}).catch(function onRejected(error){
+    console.error(error);
 });
