@@ -1,13 +1,11 @@
 import {Component} from "@angular/core";
+import template from './tab3.html';
 
 @Component({
-    template:`<ion-content>
-tab3
-</ion-content>
-`
+    template
 })
-export class Tab3Component{
-    constructor(){
-
+export class Tab3Component {
+    constructor() {
+        // let myPromise = new Promise
     }
 }

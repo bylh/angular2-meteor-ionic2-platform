@@ -6,57 +6,41 @@
     </ion-navbar>
 </ion-header>
 
-
 <ion-content class="r3t-pages-discovery-detail">
-        <ion-list>
-            <ion-item>
-                <ion-row>
-                    <ion-col class="col-img">
-                        <img class="card-img" src="img/img.jpg">
-                    </ion-col>
+    <ion-list>
+        <ion-item>
+            <ion-row>
+                <ion-col class="col-img">
+                    <img class="card-img" src="img/img.jpg">
+                </ion-col>
 
-                    <ion-col class="info">
-                        <h2 text-center>黄沙古</h2>
+                <ion-col class="info">
+                    <h2 text-center>黄沙古</h2>
 
-                        <ion-item>
-                            <ion-avatar item-left>
-                                <img src="img/img.jpg">
-                            </ion-avatar>
-                            <h3>李沐远</h3>
-                        </ion-item>
-                        <p>哈哈哈</p>
-                    </ion-col>
-                </ion-row>
-            </ion-item>
-        </ion-list>
+                    <ion-item>
+                        <ion-avatar item-left>
+                            <img src="img/img.jpg">
+                        </ion-avatar>
+                        <h3>李沐远</h3>
+                    </ion-item>
+                    <p text-center>哈哈哈</p>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
     <ion-list (click)="switchTruncatedState()">
         <ion-item text-wrap>
-            <!--[ngClass]="{test: true}"-->
             <p #myTest class="description" [ngClass]="{truncate: isTruncated}" style="line-height: 20px;">
-                static：对象遵循常规流。top，right，bottom，left等属性不会被应用。 relative：
-                对象遵循常规流，并且参照自身在常规流中的位置通过top，right，bottom，left属性进行偏移时不影响常规流中的任何元素。
-                absolute：对象脱离常规流，使用top，right，bottom，left等属性进行绝对定位，盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。fixed：对象脱离常规流，使用top，right，bottom，left等属性以窗口为参考点进行定位，当出现滚动条时，对象不会随着滚动。center：对象脱离常规流，使用top，right，bottom，left等属性指定盒子的位置或尺寸大小。盒子在其包含容器垂直水平居中。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。（CSS3）page：盒子的位置计算参照absolute。盒子在分页媒体或者区域块内，盒子的包含块始终是初始包含块，否则取决于每个absolute模式。（CSS3）
-                sticky： 对象在常态时遵循常规流。它就像是 relative 和 fixed 的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如fixed。该属性的表现是现实中你见到的吸附效果。（CSS3）*
-                CSS3新增属性可能存在描述错误及变更，仅供参考，持续更新
+                测试文字展开自动收起
             </p>
             <!--<ion-buttons end>-->
-            <button no-margin ion-button clear small block  *ngIf="buttonExist && isTruncated"><ion-icon icon-only clear small name="ios-arrow-down-outline"></ion-icon></button>
-            <button no-margin ion-button clear small block  *ngIf="buttonExist && !isTruncated" ><ion-icon icon-only clear small name="arrow-up"></ion-icon></button>
+            <button no-margin ion-button clear small block *ngIf="buttonExist && isTruncated">
+                <ion-icon icon-only clear small name="ios-arrow-down-outline"></ion-icon>
+            </button>
+            <button no-margin ion-button clear small block *ngIf="buttonExist && !isTruncated">
+                <ion-icon icon-only clear small name="arrow-up"></ion-icon>
+            </button>
             <!--</ion-buttons>-->
         </ion-item>
     </ion-list>
-
-<p>fhafhjafhjaf分局核发就会放哈的就是犯贱啊手机费等哈激发集散地发的手机费撒谎减肥哈就是粉红色的倒萨就会放大红色减肥哈就是飞洒啊的房间打扫就会放</p>
-    <!--<ion-list>-->
-    <!--<ion-row>-->
-    <!--<ion-col no-padding width-50 class="col-cover">-->
-    <!--<img class="cover" src="img/img.jpg">-->
-    <!--</ion-col>-->
-    <!--<ion-col no-padding>-->
-    <!--<ion-item>黄山</ion-item>-->
-    <!--<ion-item>李明浩</ion-item>-->
-    <!--<ion-item>参考自</ion-item>-->
-    <!--</ion-col>-->
-    <!--</ion-row>-->
-    <!--</ion-list>-->
 </ion-content>

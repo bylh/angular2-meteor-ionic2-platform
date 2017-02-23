@@ -11,6 +11,7 @@ $route-description-line-to-show: 3;
   font-size: $font-size;
   line-height: $line-height;
 }
+
 @mixin multiline-ellipsis-truncated($font-size, $line-height, $lines-to-show) {
   //max-height: $font-size * $line-height * $lines-to-show; /* Fallback for non-webkit */
   //-webkit-line-clamp: $lines-to-show;

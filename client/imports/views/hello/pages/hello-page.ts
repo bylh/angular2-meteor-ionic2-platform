@@ -16,14 +16,6 @@ export class HelloPageComponent{
     values: Array<any> = [];
     //value: string;
     data: Array<any> = [];
-//     let items: Array<any> = [];
-//     for (let imgInfo of imgInfos)
-//     items.push({
-//     src: imgInfo.photo,
-//     w: imgInfo.w,
-//     h: imgInfo.h,
-//     loop: true,
-// });
     constructor(public params: NavParams, public viewCtrl:ViewController){
         this.values = this.params.get('values');
         this.data = this.params.get('data');

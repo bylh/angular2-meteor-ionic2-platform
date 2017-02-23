@@ -11,7 +11,6 @@ import {TabsComponent} from "./views/tabs";
 
 export class EntryComponent implements OnInit {
     root = TabsComponent;
-
     ngOnInit(): void {
     }
 }

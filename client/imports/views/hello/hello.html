@@ -2,55 +2,20 @@
     <ion-title *ngIf="true">
         {{test}}
     </ion-title>
-    <h1 id="myHeader">这是标题</h1>
-    <button id="btn" ion-button block class="btn-test" (click)="testrxjs()">test</button>
-    <button ion-button (click)="pushToHelloPage()"><ion-icon name="walk"></ion-icon></button>
-    <button ion-button (click)="pushToSubPage()">SubPage</button>
-    <button ion-button (click)="changeTab()">ChangeTab</button>
+    <button ion-button block (click)="modalToPage()">弹出页面</button>
+    <button ion-button block (click)="pushToSubPage()">SubPage</button>
+    <button ion-button block (click)="changeTab()">ChangeTab</button>
     <login-buttons></login-buttons>
     <button ion-button (click)="logout()"><ion-icon name="share-alt"></ion-icon>登出</button>
-    <input type="text" [(ngModel)]="test"/>
-    <div>{{test}}</div>
-    <ion-item>test2</ion-item>
+
     <my-list [items]="[{
          title: 'first',
-         content: 'test'
+         content: 'test1'
          },{
          title: 'second',
-         content:'test'
-
+         content:'test2'
          },{
-         title: 'second',
-         content:'test'
+         title: 'third',
+         content:'test3'
          }]"></my-list>
-    <my-list [items]="[{
-         title: 'first',
-         content: 'test1放大镜和环境放大号放假哈等级师傅好骄傲的身份打算放好久达到双方就回答都是风景好的撒发放后决定手机号范德萨机房环境的撒娇发货的萨菲黄金'
-         },{
-         title: 'three',
-         content:'test'
-         }]"></my-list>
-
-    <div class="box" id="one">One</div>
-    <div class="box" id="two">Two</div>
-    <div class="box" id="three">Three</div>
-    <div class="box" id="four">Four</div>
-        <ion-list>
-            <ion-item>
-                <ion-thumbnail item-left>
-                    <img src="img/img.jpg"/>
-                </ion-thumbnail>
-                缩略图
-            </ion-item>
-            <ion-item>
-                <ion-avatar item-left>
-                    <img src="img/img.jpg"/>
-                </ion-avatar>
-                用户头像
-            </ion-item>
-            <ion-item>
-                <ion-icon name="heart" item-left></ion-icon>图标
-            </ion-item>
-        </ion-list>
-
 </ion-content>

@@ -16,6 +16,11 @@ export class Tab2Component implements AfterViewInit {
     switchTruncatedState() {
         this.isTruncated = !this.isTruncated;
     }
+
+    ionViewDidEnter() {
+        console.log('ionviewDidEnter success');
+    }
+
     ionViewDidLoad() {
         if (this.testP.nativeElement.offsetHeight / 20 > 3) {
             this.isTruncated = true;
@@ -27,12 +32,5 @@ export class Tab2Component implements AfterViewInit {
     ngAfterViewInit(): void {
         //this.testP.nativeElement.height;
         console.log(this.testP.nativeElement.offsetHeight + " +++ " + this.testP.nativeElement.style.lineHeight);
-    }
-
-    ngAfterViewChecked(): void {
-
-    }
-
-    ngAfterContentChecked(): void {
     }
 }
